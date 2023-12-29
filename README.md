@@ -1,2 +1,2 @@
-# ansible_module
-examples for most of useful module in ansible
+# ansible_modules
+examples for most of useful modules in ansible.
