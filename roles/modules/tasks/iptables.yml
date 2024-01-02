@@ -7,3 +7,17 @@
 	  jump: DROP
 	  action: insert
 	  state: present
+
+	- iptables:
+   	 table: nat
+	   chain:PREROUTING
+     in_interface: eth1
+     protocol: tcp
+     match: tcp
+     destination_port: 80
+     jump: REDIRECT
+     to_port:8080
+     comment: Redirect web traffic to port 8080
+
+
+		 
