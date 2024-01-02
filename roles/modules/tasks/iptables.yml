@@ -1,0 +1,9 @@
+	- name: block specific IP
+	  iptables:
+	  chain: INPUT
+	  source: 172.20.30.40
+    protocol: tcp
+	  destination_port: 22
+	  jump: DROP
+	  action: insert
+	  state: present
